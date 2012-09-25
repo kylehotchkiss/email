@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">       
+            body {
+                background-color: #EEEEEE;
+                color: #333333;
+                margin: 30px; /* This helps in desktop clients */
+            }
+            
+            body, #email {
+                /**
+                    It's best to make sure your body styles, such as typography,
+                    are declared in both places, just in case an email client decides
+                    it wants to ignore the body styles.
+                **/
+                
+                font-family: "Georgia", serif;
+                font-size: 13px; /** Some clients won't let you go lower than ??px */
+                -webkit-font-smoothing: antialiased; /* Yes! It still works in plenty of places! */
+            }
+            
+            #email {
+                width: 720px;
+            }
+            
+            #email #left {
+                background-color: #D65656;
+                color: #FFFFFF;
+                width: 200px;
+            }
+            
+            #email #left .title {
+                font-family: 'Helvetica', 'Arial', sans-serif;
+                font-size: 36px;
+                font-weight: bold;
+                text-align: right;
+            }
+            
+            #email #right {
+                background-color: #FFFFFF;
+                line-height: 1.6em;
+            }
+            
+            #email #right p {
+                margin: 0 0 1.6em 0;
+            }
+            
+            #footer {
+                color: #999999;
+                font-family: 'Helvetica', 'Arial', sans-serif;
+                font-size: 11px;
+                width: 720px;
+            }
+            
+            #footer a {
+                color: #999999;
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+        <!--
+            #############
+            ## CONTENT ## 
+            #############
+        -->
+        <table id="email" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+        
+                <!-- 
+                    ##########
+                    ## LEFT ##
+                    ##########
+                -->
+        
+                <td id="left" valign="top">
+                     <table cellpadding="15"><tr><td>
+                     
+                         <!--
+                              Our title is on the left side now,
+                              which means it can't be as wide, but it still
+                              can be pretty!
+                         -->
+                     
+                         <div class="title">
+                              Example Group Name
+                         </div>
+                     
+                     </td></tr></table>
+                </td>
+                
+                <td id="right">
+                    <table cellpadding="15"><tr><td>
+                        <p>
+                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros magna, eget fermentum enim. Pellentesque nec eros est, non porta erat. Curabitur tincidunt adipiscing augue, non gravida felis faucibus quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec quis risus in purus lacinia tempus eu quis sem. Curabitur et ante metus, vitae molestie justo. Maecenas luctus velit non erat porta tempus. Suspendisse dictum elementum enim, sit amet lacinia nisl dapibus vitae. Etiam nunc dolor, egestas ac adipiscing vel, porttitor nec diam. Ut mi nulla, aliquam sit amet auctor vel, condimentum sed magna. Donec cursus, diam non porta vehicula, eros lorem ultrices urna, ut porta elit orci ac tortor. Praesent ultrices, enim sed cursus accumsan, libero arcu scelerisque augue, in venenatis dolor ante sit amet lectus.
+                        </p><p>
+                             Nullam congue sem eget nibh porttitor rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Sed egestas dapibus nulla, ut imperdiet diam molestie vitae. Aliquam lorem sapien, rutrum id cursus vitae, imperdiet et massa. Donec ut velit vitae diam dignissim semper. Praesent nec urna vel quam tempus luctus vel et urna. Fusce a sem neque, sed euismod erat. Integer sed metus eu felis posuere blandit. Quisque lobortis, sem vel commodo pulvinar, ipsum arcu mattis leo, in pharetra libero enim nec diam. Aliquam aliquam dolor leo. Vestibulum sed nisi risus. Morbi ornare, orci sit amet dignissim elementum, nulla dui tincidunt mauris, ac placerat turpis elit nec tellus. Aenean sed mi tortor, et rhoncus quam. Integer a massa id purus dignissim blandit.
+                        </p><p>     
+                             Duis ullamcorper, dolor non placerat semper, nibh ipsum fermentum ipsum, quis pulvinar est elit quis nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc tempor mattis tellus, sit amet tristique lectus feugiat id. Mauris sodales, massa vehicula vehicula consequat, orci dolor sodales ligula, nec commodo augue metus ac est. Curabitur arcu mauris, dapibus vitae laoreet id, volutpat ut justo. Nullam ac leo neque. Mauris odio sem, bibendum eu facilisis ut, pharetra vitae odio. In commodo leo at urna euismod gravida. Integer ac condimentum felis. Nunc nibh est, rutrum id aliquam a, lobortis vel sem.
+                        </p><p>     
+                             Integer quis metus lacus, in posuere est. Suspendisse ultricies purus vitae enim sodales tincidunt. Mauris ut arcu lorem, varius lacinia nulla. Maecenas semper pretium convallis. Phasellus a tellus arcu, nec consequat leo. Etiam mattis, massa sit amet fermentum scelerisque, odio sem luctus lorem, vitae dignissim lorem purus in tellus. Suspendisse ac nunc augue. Ut libero nisl, faucibus sit amet pretium sed, cursus id quam. Duis cursus sapien in mauris auctor nec semper diam pharetra. Cras consequat euismod massa a venenatis. Sed tincidunt, ligula nec molestie gravida, libero velit facilisis ligula, at luctus nunc sem vitae neque. Suspendisse dictum condimentum tortor, in varius neque tristique at. Integer commodo eros ac libero imperdiet facilisis.
+                        </p><p>     
+                             Nulla facilisi. Nunc in diam justo. Fusce sollicitudin egestas lectus. Ut blandit aliquet lacus vitae semper. In quis mollis enim. Donec auctor bibendum commodo. Fusce massa nisl, eleifend non iaculis vel, suscipit id erat. Nulla fringilla dolor sit amet diam placerat a consectetur enim molestie. Nullam id sapien sed elit accumsan viverra at ac tellus. Morbi elementum luctus leo quis rutrum. Donec commodo tristique facilisis. Sed ut nibh eget velit lacinia aliquet ac sit amet nunc.
+                         </p>
+                    </td></tr></table>
+                </td>
+            </tr>
+        </table>
+        
+        <!--
+            ############
+            ## FOOTER ## 
+            ############
+        -->
+        
+        <table id="footer" align="center" cellpadding="0" cellspacing="0">
+        
+            <!--
+                To keep things simple, we are using a second table for the footer. 
+                In order to only use a master table, we'd have to shove all of the above
+                content in another table, this way ends up being more legible in the end.
+            -->
+            <tr>
+                <td>
+                    <table cellpadding="15px" width="100%"><tr>
+                    
+                        <!-- 
+                            For this table, we're actually aligning things. Remember those
+                            width and align tags to keep this as "typical" as possible 
+                            (remembering that tables don't fill the space like divs will, they
+                            need the width manually set.
+                            
+                            Do the world a favor: don't jam facebook and twitter buttons into
+                            a nicely designed email template (unless they match!) A normal
+                            link to your page stands out enough in the footer without overwhelming
+                            you message above, which is where your users eyes should be drawn!
+                        -->
+                    
+                        <!-- ## LEFT ## -->
+                    
+                        <td width="33%" align="center">
+                            <!--
+                                I can't recall if it's legally required, but it is most certainly
+                                ethical to provide an unsubscribe action to users. Don't take it 
+                                personally! Everybody has different standards for their inbox.
+                                
+                                Regarding unsubscribe links - that link *ought* to unsubscribe the
+                                user upon first click, don't be a jerk and make them fill out a form
+                                to escape from your list.
+                            -->
+                            <a href="#">Unsubscribe</a> | <a href="#">Manage Preferences</a>
+                        </td>
+                        
+                        <!-- ## CENTER ## -->
+                        
+                        <td width="33%" align="center">
+                            Copyright &copy; Example Group Name 2012
+                        </td>
+                        
+                        <!-- ## RIGHT ## -->
+                        
+                        <td width="33%" align="center">
+                            <a href="#">Like us on Facebook!</a>
+                        </td>
+                    
+                    </tr></table>
+                </td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
