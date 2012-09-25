@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            /** 
+                Guess what! Many email clients actually don't support style
+                elements - but there a service called Premailer that will 
+                convert all these to inline styles for you when you are done.
+                
+                This workflow allows you to quickly design in Chrome with a 
+                style element and still have cross-client compatibility. 
+            **/
+            
+            
+            body {
+                background-color: #EEEEEE;
+                color: #333333;
+                margin: 30px; /* This helps in desktop clients */
+            }
+            
+            body, #email {
+                /**
+                    It's best to make sure your body styles, such as typography,
+                    are declared in both places, just in case an email client decides
+                    it wants to ignore the body styles.
+                **/
+                
+                font-family: "Georgia", serif;
+                font-size: 13px; /** Some clients won't let you go lower than ??px */
+                -webkit-font-smoothing: antialiased; /* Yes! It still works in plenty of places! */
+            }
+            
+            #email {
+                width: 720px;
+            }
+            
+            #email #header {
+                background-color: #D65656;
+                border-radius: 5px;
+                color: #FFFFFF;
+            }
+            
+            #email #header .title {
+                 font-size: 36px;
+            }
+            
+            #email #content {
+                background-color: #FFFFFF;
+                line-height: 1.6em;
+            }
+            
+            #email #content p {
+                margin: 0 0  1.6em 0;
+            }
+            
+            #email #footer {
+                color: #999999;
+                font-family: 'Helvetica', 'Arial', sans-serif;
+                font-size: 11px;
+            }
+            
+            #email #footer a {
+                color: #999999;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <!-- 
+            Here comes the part that we all fear: the table.
+            In my travels as a web developer, I too once asked
+            why we used such a horrid tag to build an email message.
+            Then I tested my email in Gmail. That is all.
+            
+            No really, emails aren't as up-to-date or standardized as
+            normal web code, because people are too busy waiting for the 
+            "next big thing" to replace email to just standardize and fix
+            a system that is really quite amazing. So we're stuck using 
+            tables to get our layouts consistent cross-client. It's not 
+            pretty, but I've left some notes so that you may find your way.
+        -->
+    
+        <table id="email" cellpadding="0" cellspacing="0" align="center">
+        
+            <!-- 
+                ############
+                ## HEADER ##
+                ############
+            -->
+        
+            <tr id="header">
+                <td>
+                    <table cellpadding="15"><tr><td>               
+                        <!--
+                            AHH! More tables! Why did I create another one here, 
+                            you ask? Because we want reliable padding. That's another
+                            thing that email clients don't always agree on: margin and
+                            padding. It's hard to read, admittedly, but in the end, you're
+                            designing an email that should look great to all your visitors,
+                            not just yourself!
+                        -->
+                        
+                        <div class="title">
+                            <!--
+                                Note that you still *can* use divs, you just can't expect
+                                them to render as block elements like they would in the browser.
+                            -->
+                        
+                            Example Group Name.
+                        
+                        </div>
+                    
+                    </td></tr></table>
+                </td>
+            </tr>
+            
+            <!-- 
+                #############
+                ## CONTENT ##
+                #############
+            -->
+            
+            <tr id="content">
+                <td>
+                    <table cellpadding="15"><tr><td>
+                                            
+                        <p>
+                            <!--
+                                 Even though we're confined to many rules regarding elements, 
+                                 remember to still keep your textual content very neatly organized.
+                                 Thankfully, email clients seem to handle typography cross-client very
+                                 well, so put those years of typographical experience to work!
+                            -->
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer est libero, posuere in pretium eu, fringilla eu leo. Suspendisse potenti. Etiam at neque in orci varius porttitor. Vestibulum sit amet mi libero, eu tristique mi. Vivamus rhoncus, turpis sed commodo vehicula, metus ipsum porta felis, non tempus quam elit quis ligula. Donec ligula velit, convallis a mollis a, sodales in velit. Nam nulla neque, tempus vel dignissim id, iaculis sit amet libero. Vestibulum in enim ac ligula viverra molestie in et felis.
+                        </p><p>
+                            Fusce eget neque diam. Vivamus sollicitudin fermentum orci, vitae fringilla sem elementum ac. Duis vehicula ipsum at enim vulputate vel suscipit nibh dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce luctus risus vitae odio auctor pulvinar. Curabitur cursus, velit id aliquam facilisis, metus arcu laoreet tortor, non scelerisque orci augue ac dui. Aenean vitae bibendum magna. Nulla mollis felis enim. Donec quis eros diam.
+                        </p><p>                            
+                            Nulla quis elit dolor. Cras et velit id orci fringilla fringilla. Ut ultrices risus a nunc scelerisque mattis. Nulla at turpis quis tellus mollis posuere sit amet sit amet eros. Curabitur id purus eu odio venenatis aliquam. Donec molestie tempus lorem non congue. Suspendisse ullamcorper, augue in cursus ultrices, ante ipsum porta leo, quis facilisis nibh elit a mauris. Sed lobortis lacinia cursus. Sed cursus cursus sem eget blandit. Donec non vestibulum felis.
+                        </p><p>                            
+                            Phasellus euismod consectetur nibh sed accumsan. Suspendisse lacus lectus, sollicitudin vel fermentum eu, convallis vitae sem. Nam lobortis lorem eu enim rhoncus molestie. Suspendisse potenti. Curabitur ante tortor, aliquam non elementum ut, posuere et lacus. Nunc laoreet ipsum dignissim tellus dapibus quis pulvinar arcu pellentesque. Nullam risus nulla, eleifend ac malesuada vel, rutrum non elit.
+                        </p><p>                            
+                            Cras suscipit, lorem elementum mollis pellentesque, justo purus luctus sem, vel adipiscing felis enim ut metus. Donec ut tincidunt nibh. Donec vel erat non leo condimentum gravida. Integer urna enim, rutrum lacinia commodo laoreet, fermentum quis elit. Ut fermentum velit non nibh placerat laoreet. Cras non pulvinar dui. Nullam tellus tortor, rhoncus sed gravida eget, vestibulum tincidunt urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p>
+                
+                    </td></tr></table>
+                </td>
+            </tr>
+            
+            <!-- 
+                ############
+                ## FOOTER ##
+                ############
+            -->
+            
+            <tr id="footer">
+                <td>
+                    <table cellpadding="15px" width="100%"><tr>
+                    
+                        <!-- 
+                            For this table, we're actually aligning things. Remember those
+                            width and align tags to keep this as "typical" as possible 
+                            (remembering that tables don't fill the space like divs will, they
+                            need the width manually set.
+                            
+                            Do the world a favor: don't jam facebook and twitter buttons into
+                            a nicely designed email template (unless they match!) A normal
+                            link to your page stands out enough in the footer without overwhelming
+                            you message above, which is where your users eyes should be drawn!
+                        -->
+                    
+                        <!-- ## LEFT ## -->
+                    
+                        <td width="33%" align="center">
+                            <!--
+                                I can't recall if it's legally required, but it is most certainly
+                                ethical to provide an unsubscribe action to users. Don't take it 
+                                personally! Everybody has different standards for their inbox.
+                                
+                                Regarding unsubscribe links - that link *ought* to unsubscribe the
+                                user upon first click, don't be a jerk and make them fill out a form
+                                to escape from your list.
+                            -->
+                            <a href="#">Unsubscribe</a> | <a href="#">Manage Preferences</a>
+                        </td>
+                        
+                        <!-- ## CENTER ## -->
+                        
+                        <td width="33%" align="center">
+                            Copyright &copy; Example Group Name 2012
+                        </td>
+                        
+                        <!-- ## RIGHT ## -->
+                        
+                        <td width="33%" align="center">
+                            <a href="#">Like us on Facebook!</a>
+                        </td>
+                    
+                    </tr></table>
+                </td>
+            </tr>
+        
+        </table>
+    </body>
+</html>
