@@ -6,8 +6,8 @@ This won't create those crazy email newsletters you get every month, but it will
 
 ## Instructions
 
-1) Read through the template(s). Get an idea of how you have to lay things out in an email. Drop jaw over necessary use of tables for layout. 
-2) Replace the dummy content with your own! Make it pretty, make it shine. You can design it in Chrome!
-3) Run it through a style inlining program like Premailer. This really helps because many clients don't support the style tag.
-4) Run your email through a testing service like Litmus. This will give you an idea of how your email looks to others.
+1. Read through the template(s). Get an idea of how you have to lay things out in an email. Drop jaw over necessary use of tables for layout. 
+2. Replace the dummy content with your own! Make it pretty, make it shine. You can design it in Chrome!
+3. Run it through a style inlining program like Premailer. This really helps because many clients don't support the style tag.
+4. Run your email through a testing service like Litmus. This will give you an idea of how your email looks to others.
 
